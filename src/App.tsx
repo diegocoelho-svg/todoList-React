@@ -1,6 +1,7 @@
 import Text from "./components/text";
 import Icon from "./components/icon";
 import Badge from "./components/badge";
+import Button from "./components/button";
 
 import TrashIcon from "./assets/icons/Trash-Regular.svg?react";
 import CheckIcon from "./assets/icons/Check-Regular.svg?react";
@@ -37,6 +38,10 @@ export default function App() {
       <div>
         <Badge variant="secondary">5</Badge>
         <Badge variant="primary">2 de 5</Badge>
+      </div>
+
+      <div>
+        <Button icon={PlusIcon}>Nova tarefa!</Button>
       </div>
 
 
