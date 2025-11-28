@@ -14,6 +14,7 @@ import PlusIcon from "./assets/icons/Plus-Regular.svg?react";
 import SpinnerIcon from "./assets/icons/spinner.svg?react";
 import xIcon from "./assets/icons/X-Regular.svg?react";
 import Container from "./components/container";
+import Skeleton from "./components/skeleton";
 
 export default function App() {
   return (
@@ -41,9 +42,10 @@ export default function App() {
           <Icon svg={xIcon} />
         </div>
 
-        <div>
+        <div className="flex gap-1">
           <Badge variant="secondary">5</Badge>
           <Badge variant="primary">2 de 5</Badge>
+          <Badge isLoading>5</Badge>
         </div>
 
         <div>
@@ -54,6 +56,7 @@ export default function App() {
           <ButtonIcon icon={TrashIcon} />
           <ButtonIcon icon={TrashIcon} variant="secondary" />
           <ButtonIcon icon={TrashIcon} variant="tertiary" />
+          <ButtonIcon icon={TrashIcon} isLoading />
         </div>
 
         <div>
@@ -62,12 +65,18 @@ export default function App() {
 
         <div>
           <InputCheckbox />
+          <InputCheckbox isLoading />
         </div>
 
         <div>
           <Card size="md">Hello word!</Card>
         </div>
 
+        <div className="space-y-2">
+          <Skeleton className="h-6" />
+          <Skeleton className="h-6" />
+          <Skeleton className="w-96 h-6" />
+        </div>
       </div>
     </Container>
   )
